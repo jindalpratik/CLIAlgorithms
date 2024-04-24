@@ -5,7 +5,7 @@
 groups = ["default", "lint", "cpp_binding", "cli"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:fe865ca564252ca5a951319eddb6bf54a8a50eb1a4edcf6b28d1fb36f9ffdccd"
+content_hash = "sha256:bf03250f0f3c6ee1273f3d66be0e639b28a2d7a35d0294756059c1051152f1fc"
 
 [[package]]
 name = "black"
@@ -133,6 +133,17 @@ groups = ["cpp_binding"]
 files = [
     {file = "pybind11-2.12.0-py3-none-any.whl", hash = "sha256:df8d60b94f9e714d81013db233393d430ebf9f3551642b82291cf1b14d1afdbd"},
     {file = "pybind11-2.12.0.tar.gz", hash = "sha256:5e3c557a84b06b969247630407fc4d985bed157b4253b13153b8e8e165e0c3dc"},
+]
+
+[[package]]
+name = "pybind11-stubgen"
+version = "2.5.1"
+requires_python = "~=3.7"
+summary = "PEP 561 type stubs generator for pybind11 modules"
+groups = ["cpp_binding"]
+files = [
+    {file = "pybind11-stubgen-2.5.1.tar.gz", hash = "sha256:4427a67038a00c5ac1637ffa6c65728c67c5b1251ecc23c7704152be0b14cc0b"},
+    {file = "pybind11_stubgen-2.5.1-py3-none-any.whl", hash = "sha256:544d49df57da827c8761e7f6ef6bca996df80a33c9fd21c2521d694d4e72fe8d"},
 ]
 
 [[package]]
