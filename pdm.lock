@@ -2,10 +2,10 @@
 # It is not intended for manual editing.
 
 [metadata]
-groups = ["default", "lint", "cpp_binding", "cli"]
+groups = ["default", "lint", "cpp_binding", "cli", "stubs"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:bf03250f0f3c6ee1273f3d66be0e639b28a2d7a35d0294756059c1051152f1fc"
+content_hash = "sha256:244ff14b2a764bb5975abed57baf6535c0c41e7db414bae1692d197442190b9e"
 
 [[package]]
 name = "black"
@@ -140,7 +140,7 @@ name = "pybind11-stubgen"
 version = "2.5.1"
 requires_python = "~=3.7"
 summary = "PEP 561 type stubs generator for pybind11 modules"
-groups = ["cpp_binding"]
+groups = ["stubs"]
 files = [
     {file = "pybind11-stubgen-2.5.1.tar.gz", hash = "sha256:4427a67038a00c5ac1637ffa6c65728c67c5b1251ecc23c7704152be0b14cc0b"},
     {file = "pybind11_stubgen-2.5.1-py3-none-any.whl", hash = "sha256:544d49df57da827c8761e7f6ef6bca996df80a33c9fd21c2521d694d4e72fe8d"},
