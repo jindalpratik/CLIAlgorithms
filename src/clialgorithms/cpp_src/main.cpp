@@ -81,9 +81,34 @@ public:
         array_example_3_printArray(arr_ex_2, n);
     }
 
+    // -> Searching in arrays.
+
+    /*
+    The below function implements the linear search algorithm which goes through an array in linear order to find the
+    target element which we are search for trying to match each element with the target element as it goes through the
+    array.
+    */
+    void linear_search()
+    {
+        int arr_ls[] = {4, 7, 8, 9, 5, 2};
+        int len = sizeof(arr_ls) / sizeof(int);
+        int input;
+        cout << "Enter element to find via linear search :: ";
+        cin >> input;
+        int index = linear_search_linearSearch(arr_ls, len, input);
+        if (index == -1)
+        {
+            cout << input << " not found" << endl;
+        }
+        else
+        {
+            cout << input << " present at index :: " << index << endl;
+        }
+    }
+
 private:
     /*
-    Helper funciton for array_example_2()
+    Helper funciton for array_example_2().
     */
     void array_example_2_printArray(int arr_ex_1[])
     {
@@ -91,7 +116,7 @@ private:
     }
 
     /*
-    Helper function for array_example_3()
+    Helper function for array_example_3().
     */
     void array_example_3_printArray(int arr_ex_2[], int n)
     {
@@ -101,6 +126,22 @@ private:
         {
             cout << arr_ex_2[i] << " ";
         }
+        cout << endl;
+    }
+
+    /*
+    Helper function for linear search().
+    */
+    int linear_search_linearSearch(int arr_ls[], int len, int input)
+    {
+        for (int i = 0; i <= len; i++)
+        {
+            if (arr_ls[i] == input)
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 };
 
@@ -113,5 +154,6 @@ PYBIND11_MODULE(cppalgorithm, m)
         .def("info", &Arrays::info)
         .def("array_example_1", &Arrays::array_example_1)
         .def("array_example_2", &Arrays::array_example_2)
-        .def("array_example_3", &Arrays::array_example_3);
+        .def("array_example_3", &Arrays::array_example_3)
+        .def("linear_search", &Arrays::linear_search);
 }
