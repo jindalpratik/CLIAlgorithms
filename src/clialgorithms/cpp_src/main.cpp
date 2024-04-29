@@ -10,7 +10,7 @@ Class for all the informations and practice code related to arrays.
 */
 class Arrays
 {
-    
+
 public:
     /*
     The functions provides the information about arrays in c++.
@@ -81,7 +81,7 @@ public:
         array_example_3_printArray(arr_ex_2, n);
     }
 
-    private:
+private:
     /*
     Helper funciton for array_example_2()
     */
