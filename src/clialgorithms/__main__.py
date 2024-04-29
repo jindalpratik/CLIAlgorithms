@@ -1,5 +1,7 @@
 import cppalgorithm
 
-num = cppalgorithm.add(1, 2)
+arrays = cppalgorithm.Arrays()
 
-help(cppalgorithm)
+arrays.info()
+arrays.array_example_2()
+arrays.array_example_3()
