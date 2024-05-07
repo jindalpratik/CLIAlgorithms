@@ -106,6 +106,24 @@ public:
         }
     }
 
+    void binary_search_iterative_method()
+    {
+        int arr_bsim[] = {3, 4, 5, 6, 7, 8, 9, 55, 66};
+        int input;
+        cout << "Enter element to find via linear search :: ";
+        cin >> input;
+        int len = sizeof(arr_bsim) / sizeof(int);
+        int result = binary_search_iterative_method_binarySearch(arr_bsim, input, 0, len - 1);
+        if(result == -1)
+        {
+            cout << "Element could not be found" << endl;
+        }
+        else
+        {
+            cout << "Element fount at index :: " << result << endl;
+        }
+    }
+
 private:
     /*
     Helper funciton for array_example_2().
@@ -130,7 +148,7 @@ private:
     }
 
     /*
-    Helper function for linear search().
+    Helper function for linear_search().
     */
     int linear_search_linearSearch(int arr_ls[], int len, int input)
     {
@@ -141,6 +159,33 @@ private:
                 return i;
             }
         }
+        return -1;
+    }
+
+    /*
+    Helper function for binary_search_iterative_method().
+    */
+    int binary_search_iterative_method_binarySearch(int arr_bsim[], int input, int low, int high)
+    {
+        while (low <= high)
+        {
+            int mid = low + (high - low) / 2;
+
+            if (arr_bsim[mid] == input)
+            {
+                return mid;
+            }
+
+            if (arr_bsim[mid] < input)
+            {
+                low = mid + 1;
+            }
+            else
+            {
+                high = mid - 1;
+            }
+        }
+
         return -1;
     }
 };
